@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form>
+        Value1: <br>
+        <input type="number" id="value1"><br>
+        Value2: <br>
+        <input type="number" id="value2"><br>
+        <input type="button" onclick="cong()" value="Addition(+)">
+        <input type="button" onclick="tru()" value="Substraction(-)">
+        <input type="button" onclick="nhan()" value="Multiplication(*)">
+        <input type="button" onclick="chia()" value="Division(/)">
+    </form>
+    <script>
+
+        var value1;
+        var value2;
+        var result;
+
+        function getInput() {
+            value1=Number(document.getElementById("value1").value);
+            value2=Number(document.getElementById("value2").value);
+        }
+
+        function cong(){
+            getInput();
+            result = value1 + value2;
+            alert(result);
+        }
+
+        function tru() {
+            getInput();
+            result = value1 - value2;
+            alert(result);
+        }
+        function nhan() {
+            getInput();
+            result = value1*value2;
+            alert(result);
+        }
+        function chia() {
+            getInput();
+            result = value1/value2;
+            alert(result);
+        }
+    </script>
+</body>
+
+</html>
