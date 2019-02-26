@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Count number of days for a month</title>
+</head>
+
+<body>
+    <form>
+        Input a month: <input name="number" type="text" id="month" />
+        <button type="button" onclick="count();">Convert</button>
+    </form>
+    <script>
+        function count() {
+            var month = document.getElementById("month").value;
+            switch (month) {
+                case '2': {
+                    document.write("This month has 28 or 29 days");
+                    break;
+                }
+                default: {
+                    document.write("Not Exist!");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
