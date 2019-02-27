@@ -4,13 +4,14 @@
 </head>
 <body>
     <script>
-        var width;
-        var height;
-        var area;
-        height = parseInt(prompt("Nhập chiều cao")); 
-        width = parseInt(prompt("Nhập chiều rộng"));
-        area = width*height;
-        document.write("The area of rectangular: " + area)
+        var a;
+        var b;
+        a = parseInt(prompt("nhap a")); 
+        b = parseInt(prompt("nhap b"));
+        if(a%b==0)
+            alert("a la boi cua b");
+        else
+            alert("a khong phai la boi cua  b");
     </script>
 </body>
 </html>

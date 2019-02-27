@@ -23,9 +23,26 @@
             var toCurrency = document.getElementById("toCurrency").value;
 
             
-            alert(amount);
-            alert(fromCurrency);
-            alert(toCurrency);
+            var USD_VND = 23000;
+
+            var result;
+
+            if (fromCurrency == 'VND') {
+                if (toCurrency == 'USD') {
+                    result = amount / USD_VND; 
+                } else {
+                    result = amount;
+                }
+            } else {
+                if (toCurrency == 'VND') {
+                    result = amount * USD_VND;
+                } else {
+                    result = amount;
+                }
+            }
+            document.write("Gia tri chuyen doi: " + result)
+
+            
         }
     </script>
 
