@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find the maximum value in an array</title>
+    </head>
+    <body>
+        <h5>Find the maximum value</h5>
+        <script>
+            let x = [-5,6,-9,-1,7,9,15,65,99,101,-25,-10,111];
+            let max = x[0];
+            let index = 0;
+            for ( let i = 1; i < x.length; i++) {
+                if (x[i]>max){
+                    max = x[i];
+                    index = i;
+                }
+            }
+            document.write("The maximum value is " + max + " and its position is " + index);
+        </script>
+    </body>
+</html>
