@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create a caro simple</title>
+    </head>
+    <body>
+        <h5>Care Game Simple</h5>
+        <p id = "carogame" />
+        <input type="button"  value="Change Value" onclick="changeValue()" id="Cvalue">
+        <script>
+            let a = document.getElementById("carogame");
+            let tale = [];
+            let stat = "";
+            for (let i=0; i<5; i++) {
+                table[i]= new Array (0,0,0,0,0);
+            }
+            for (let i=0; i<5;i++) {
+                stat += "<br/>";
+                for (let j = 0; j < 5; j++){
+                    stat += table [i][j] + "&nbsp;&nbsp;";
+                }
+            }
+            stat += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+            b.innerHTML = data;
+
+            function changeValue() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            stat = "";
+            table[positionX][positionY] = "x";
+            for (let i = 0; i < 5; i++) {
+                stat += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    stat += table[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            table += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+            b.innerHTML = "<hr/>" + table;
+        </script>
+    </body>
+</html>
