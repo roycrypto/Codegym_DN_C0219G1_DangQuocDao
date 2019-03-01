@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter an array and reverse it also</title>
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("How many interger numbers you would like to put: "));
+        var nums = [];
+        for (i = 0; i < n; i++) {
+            nums[i] = parseInt(prompt("Enter the list of " + n + " numbers you would like to put"));
+        }
+        var first = 0;
+        var last = nums.length - 1;
+        var a;
+        while (first < last) {
+            a = nums[first];
+            nums[first] = nums[last];
+            nums[last] = a;
+            first++;
+            last--;
+        }
+        document.write(nums);
+
+    </script>
+</body>
+
+</html>
