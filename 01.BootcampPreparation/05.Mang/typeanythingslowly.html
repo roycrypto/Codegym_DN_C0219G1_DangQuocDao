@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Type anything slowly</h2>
+        <textarea id="txt" cols="40" rows="10" onkeydown="typeTextArea(event)"></textarea>
+    </body>
+    <script>
+            var x = "Dân chơi tổng hợp Đắk Lắk";
+            var txt = document.getElementById("txt");
+            var i = 0;
+            function typeTextArea(event) {
+                event.preventDefault();
+                //preventDefault để vô hiệu hóa sự kiện mặc định của Textarea
+                if (i >= x.length) {
+                    i = 1;
+                    txt.value = x[0];
+                } else {
+                    txt.value += x[i];  
+                    i++;
+                }
+            }
+        </script> 
+</html> 
