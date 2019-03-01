@@ -17,14 +17,15 @@
 <script>
     let x=0;
     let array = Array();
-    function (add_to_element_array) {
+    function add_to_element_array() {
         array[x]=document.getElementById("txtValue").value;
-        alert("Element: " + array[x] + "Added at index no. " + x);
+        alert("Element: " + array[x] + " Added at index no. " + x);
         x++;
         document.getElementById("txtValue").value= "";
     }
+        let e;
     function display_array(){
-        let e = "<hr/>";
+        e = "<hr/>";
         for (let i = 0; i < array.length; i++) {
         e += "Element " + i + " = " + array[i] + "<br/>";
     }
