@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find max value and average value of an array</title>
+    </head>
+    <body>
+        <script>
+            var number = [];
+            for (i = 0; i < 10; i++) {
+                number[i] = parseInt(prompt("Enter a list of 10 interger numbers: "))
+            }
+            var max = number[0];
+            var index = 0;
+            var y;
+            for (y = 0; y <= 10; y++) {
+                if (number[y]>max){
+                    max = number[y];
+                    index = y;
+                }
+            }
+            document.write("The maximum value is " + max + " its index at " + (index + 1) + "<br>");
+
+            // The average value of this array is: 
+            var total = 0;
+            var average;
+            var result2;
+            var flag = true;
+            for (let i = 0 ; i < number.length ; i++) {
+                total += number[i];
+            }
+            average = total / number.length;
+
+            document.write("Gia tri trung binh la:  " + average);
+            
+        </script>
+    </body>
+</html>
