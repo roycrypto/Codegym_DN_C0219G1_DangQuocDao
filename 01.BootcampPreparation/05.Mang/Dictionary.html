@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>English-Vietnamese Dictionary</title>
+    </head>
+    <body>
+        <h5>English-Vietnamese Dictionary</h5>
+        <script>
+            let word = prompt("Please input a word to be found: ");
+            let Eng=["ball","football","car","pencil","bike","house"];
+            let Vie=["quả bóng","bóng đá","oto","bút chì","xe đạp","căn nhà"];
+            for (let i=0; i < Eng.length; i++) {
+                if (Eng[i]==word){
+                    alert(Vie[i]);
+                    break;
+                }
+                else { 
+                    alert("The word " + word + " is not found here yet"); 
+                }
+                
+            }
+        </script>
+    </body>
+</html>

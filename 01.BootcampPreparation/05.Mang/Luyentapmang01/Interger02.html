@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find the max value in an array</title>
+    </head>
+    <script>
+        var nums = [];
+        for (let i = 0; i < 10; i++) {
+            let flag = true;
+            while(flag) {
+                let j;
+                let tmp = parseInt(prompt("Nhap vao phan tu thu " + (i+1)));
+                for (j = 0; j < i; j++) {
+                    if (tmp == nums[j]) break;
+                }
+                if (j == i) {
+                    nums[i] = tmp;
+                    flag = false;
+                }
+            }
+        }
+        let max = nums[0];
+        let index = 0;
+        let y;
+        for (y = 1; y < nums.length; y++) {
+            if (nums[y]>max){
+                max = nums[y];
+                index = y;
+            }
+        }
+        document.write("The maximum value is " + max + " And its position is at " + (index + 1));
+    </script>
+</html>

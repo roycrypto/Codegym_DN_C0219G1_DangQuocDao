@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>So nguyen to</title>
-    </head>
-    <body>
-        <script>
-          var number=prompt("Nhập 1 số từ bàn phím: ");  
-          var count=0;
-          var n=2;
-          var SNT = "";
-          while (count<number) {
-              if(primenumber(n)){
-                SNT += (n + " ");
-                count++;
-              }
-              n++;
-            }
-              function primenumber(n){
-                  for(let i = 2; i <= Math.sqrt(n); i++){
-                      if (n % i == 0) return false;
-                  }
-                  return true;
-              }
-          document.write(SNT);
 
-        </script>
-    </body>
+<head>
+  <title>So nguyen to</title>
+</head>
+
+<body>
+  <script>
+    example();
+
+
+
+    // All Function are here.
+    function example() {
+      var number = prompt("Nhập 1 số từ bàn phím: ");
+      var count = 0;
+      var n = 2;
+      var SNT = "";
+      while (count < number) {
+        if (isPrime(n)) {
+          SNT += (n + " ");
+          count++;
+        }
+        n++;
+      }
+      document.write(SNT);
+    }
+
+    function isPrime(n) {
+      var isPrime = true;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      return isPrime;
+    }
+
+  </script>
+</body>
+
 </html>
