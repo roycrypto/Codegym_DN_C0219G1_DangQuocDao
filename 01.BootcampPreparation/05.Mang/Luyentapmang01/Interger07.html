@@ -15,19 +15,17 @@
         }
         var V;
         V = parseInt(prompt("Input V to check"));
-        var indexResult = -1;
-        for (i = 0; i < n; i++) {
-            if (nums[i] == V) {
-                indexResult = i;
+
+        for (y = 0; y < n; y++) {
+            if (nums[y] == V) {
+                alert(V + " is in the array, index at" + y);
                 break;
             }
+            else {
+                alert(V + " is not in the, index at" + y );
+            }
         }
-
-        if (indexResult >= 0) {
-            alert(V + " is in the array" + " " + (indexResult + 1));
-        } else {
-            alert(V + " is not in the array");
-        }
+        nums.splice()
 
 
     </script>
