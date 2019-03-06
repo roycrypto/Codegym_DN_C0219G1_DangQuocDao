@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Feet and meter Converter
+    </title>
+</head>
+
+<body>
+    <form>
+        Amount: <input id="amount" type="text">
+    </form>
+    &emsp;
+    From:
+    <select id="from" size="1">
+        <option value="Meter">Meter</option>
+        <option value="Ft">Feet</option>
+    </select>
+    &emsp; To:
+    <select id="to">
+        <option value="Meter">Meter</option>
+        <option value="Ft">Feet</option>
+    </select>
+    &emsp; <button type="button" onclick="convert()">Convert</button>
+    <br>
+    <script>
+        function convert() {
+            var amount = parseInt(document.getElementById("amount").value);
+            var to = document.getElementById("to").value;
+            var from = document.getElementById("from").value;
+            var meter_foot = 3.28;
+            var foot_meter = 0.304;
+            var result;
+
+            if (from == 'Meter') {
+                if (to == 'Meter') {
+                    result = amount;
+                } else {
+                    result = amount * meter_foot;
+                }
+            } else {
+                if (to == 'Ft') {
+                    result = amount;
+                } else {
+                    result = amount * foot_meter;
+                }
+            }
+            document.write("Converting Value Is: " + result)
+        }
+
+    </script>
+</body>
+
+</html>

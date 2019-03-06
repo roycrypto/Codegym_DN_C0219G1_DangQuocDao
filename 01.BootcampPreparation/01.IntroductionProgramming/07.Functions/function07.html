@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <script>
+        let nameinput = prompt("Please input a star name: ");
+        let name = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let star = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+
+        
+        function check(nameStar) {
+            console.log(nameStar);
+            for (let i = 0; i < name.length; i++) {
+                console.log(name[i]);
+                if (name[i]==nameStar) {
+                    return star[i];
+                } 
+            }
+            return -1;
+        }
+        let result = check(nameinput);
+        alert(result);
+    </script>
+</body>
+
+</html>
