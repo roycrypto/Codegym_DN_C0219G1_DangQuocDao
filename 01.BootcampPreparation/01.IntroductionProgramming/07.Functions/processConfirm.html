@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Thuc hanh tao va goi ham
+        </title>
+        <body>
+            <script>
+                function processConfirm(answer){
+                    var result = "";
+                    if (answer) {
+                        result = "Well, absolutely you did an awesome game, thanks mate";
+                    } else {
+                        result = "Better luck next time";
+                    }
+                    return result;
+                }
+                var makeAnswer = confirm("Would we play this game?");
+                var theAnswer = processConfirm(makeAnswer);
+                alert(theAnswer);
+            </script>
+        </body>
+    </head>
+</html>

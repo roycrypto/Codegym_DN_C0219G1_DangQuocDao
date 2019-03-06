@@ -8,23 +8,20 @@
 <body>
   <script>
     example();
-
-
-
     // All Function are here.
     function example() {
       var number = prompt("Nhập 1 số từ bàn phím: ");
       var count = 0;
       var n = 2;
-      var SNT = "";
+      var result = "";
       while (count < number) {
         if (isPrime(n)) {
-          SNT += (n + " ");
+          result += (n + " ");
           count++;
         }
         n++;
       }
-      document.write(SNT);
+      document.write(result);
     }
 
     function isPrime(n) {
