@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Temperature</title>
+</head>
+
+<body>
+    <script>
+        let Temperature = function () {
+            let tempC = parseInt(prompt("Please input a celcius: "));
+            if (tempC >= -273) {
+                this.temp = tempC;
+
+                this.changeToK = function (temp) {
+                    this.tempK = tempC + 273, 15;
+                    document.write("The Kenvin is: " + this.tempK + '. <br>');
+                }
+                this.changetoF = function (temp) {
+                    this.tempF = (tempC * 9 / 5) + 32;
+                    document.write("The F is: " + this.tempF + '.');
+                }
+            } else {
+                alert("This is unable to convert");
+            }
+        }
+        var temp1 = new Temperature();
+        temp1.changeToK();
+        temp1.changetoF();
+    </script>
+</body>
+
+</html>
