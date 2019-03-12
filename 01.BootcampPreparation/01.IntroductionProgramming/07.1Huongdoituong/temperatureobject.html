@@ -10,13 +10,13 @@
         let Temperature = function () {
             let tempC = parseInt(prompt("Please input a celcius: "));
             if (tempC >= -273) {
-                this.temp = tempC;
+                this.temp2 = tempC;
 
-                this.changeToK = function (temp) {
+                this.changeToK = function (temp2) {
                     this.tempK = tempC + 273, 15;
                     document.write("The Kenvin is: " + this.tempK + '. <br>');
                 }
-                this.changetoF = function (temp) {
+                this.changetoF = function (temp2) {
                     this.tempF = (tempC * 9 / 5) + 32;
                     document.write("The F is: " + this.tempF + '.');
                 }
