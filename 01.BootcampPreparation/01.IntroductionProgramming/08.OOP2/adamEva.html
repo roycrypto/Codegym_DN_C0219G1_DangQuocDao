@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adam va Eva</title>
+    </head>
+    <body>
+        <script>
+            function Apple(weight) {
+                this.weight = weight;
+                this.decrease = function() {
+                    this.weight--;
+                };
+                this.isEmpty = function() {
+                    return this.weight <= 0;
+                };
+                this.getWeight = function() {
+                    return this.weight;
+                }
+            }
+            function Human(weight, name, gender) {
+                this.weight = weight;
+                this.name = name;
+                this.gender = gender;
+                this.isMale = function() {
+                    return this.gender == "male";
+                }
+                this.setGender = function(gender) {
+                    this.gender = gender;
+                }
+                this.checkApple = function(apple) {
+                    return apple.isEmpty();
+                }
+                this.eat = function(apple) {
+                    if (!apple.isEmpty()) {
+                        this.weight++;
+                        apple.decrease();
+                    }
+                }
+                this.say = function(saySomething) {
+                    console.log(saySomething);
+                }
+                this.getName = function() {
+                    return this.name;
+                }
+                this.setName = function(name) {
+                    this.name = name;
+                }
+                this.getWeight = function() {
+                    return this.weight;
+                }
+                this.setWeight = function() {
+                    this.weight = weight;
+                }
+            }
+
+           var adam = new Human(65,'adam','male');
+           var eva = new Human(50,'eva','female');
+
+           var apple = new Apple(10);
+
+           adam.say("Anh an 1 mieng nhe em!");
+           eva.say('oke anh');
+           adam.eat(apple);
+           eva.say('Toi luot em');
+           eva.eat(apple);
+
+           console.log("Can nang cua adam : " + adam.getWeight());
+           console.log("Can nang cua eva : " + eva.getWeight());
+           console.log("Can nang cua tao: " + apple.getWeight());
+
+        </script>
+    </body>
+</html>
