@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Create a simple game</title>
-    </head>
-    <body>
-        <script>
-            
-        </script>
-    </body>
+
+<head>
+    <title>Create a simple game</title>
+</head>
+
+<body>
+    <div id="Game"></div>
+    <script>
+        function simpleGame(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.getHeroElement = function () {
+                return '<img width="' + this.size + '"' +
+                    ' height="' + this.size + '"' +
+                    ' src="' + this.image + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+            }
+            this.moveRight = function() {
+                this.left += 20;
+                console.log('ok: ' + this.left);
+            }
+        }
+        var game = new simpleGame('pikachu.png',30,40,300);
+        
+        function start() {
+            if(game.left < window.innerWith - game.size) {
+                game.moveRight();
+            }
+            document.getElementById('Game').innerHTML = game.getHeroElement();
+            setTimeout(start, 500)
+        }
+        start();
+    </script>
+</body>
+
 </html>
